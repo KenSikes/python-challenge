@@ -7,8 +7,11 @@ total_months = 0
 month_counter = 0
 net_total = 0
 average_change = 0
-greatest_decrease = 0
-greatest_increase = 0
+#tutor helped me understand why this is needed
+greatest_decrease = 9999999
+greatest_increase = -9999999
+greatest_increase_date = ''
+greatest_decrease_date = ''
 total_profit = 0
 total_losses = 0
 
@@ -28,15 +31,35 @@ with open(csvpath) as csvfile:
         month_counter += 1
         # total proft
         net_total += row[1]
-        
-        
-        
-        
-        
 
+        #get greatest increase
+        if row[1] > greatest_increase:
+            greatest_increase = row[1]
+            greatest_increase_date = row[0]
+
+        #get greatest decrease
+        if row[1] < greatest_decrease: 
+            greatest_decrease = row[1]
+            greatest_decrease_date = row[0]
 
 # changes over period
-average_change = net_total / month_counter        
+average_change = net_total / month_counter      
+
+#print analysis
+print("Financial Analysis")
+print("------------------------")
+print("Total Months:", total_months)
+
+
+
+        
+        
+        
+        
+        
+
+
+
 
 
 
