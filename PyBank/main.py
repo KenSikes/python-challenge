@@ -49,6 +49,12 @@ average_change = net_total / month_counter
 print("Financial Analysis")
 print("------------------------")
 print("Total Months:", total_months)
+print("Total:", net_total)
+print("Average Change:", average_change)
+print("Greatest Increase in Profits:", greatest_increase, greatest_increase_date)
+print("Greatest Descrease in Profits:", greatest_decrease, greatest_decrease_date)
+
+
 
 
 
