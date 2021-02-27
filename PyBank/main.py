@@ -2,7 +2,7 @@
 import os
 import csv
 
-#create some variables
+#create some variables 
 total_months = 0
 month_counter = 0
 net_total = 0
@@ -54,12 +54,13 @@ print("Average Change:", average_change)
 print("Greatest Increase in Profits:", greatest_increase, greatest_increase_date)
 print("Greatest Descrease in Profits:", greatest_decrease, greatest_decrease_date)
 
-
+#create the path for a text file 
 outpath = os.path.join("Analysis", "Analysis.txt")
 
+#give you the ability to write the file
 with open(outpath, "w") as file:
 
-
+    #creating the text in the file
     file.write("Financial Analysis\n")
     file.write("------------------------\n")
     file.write("Total Months:" + str(total_months) +"\n")
