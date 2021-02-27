@@ -30,16 +30,16 @@ with open(csvpath) as csvfile:
     for row in csvreader: 
         month_counter += 1
         # total proft
-        net_total += row[1]
+        net_total += int(row[1])
 
         #get greatest increase
-        if row[1] > greatest_increase:
-            greatest_increase = row[1]
+        if int(row[1]) > greatest_increase:
+            greatest_increase = int(row[1])
             greatest_increase_date = row[0]
 
         #get greatest decrease
-        if row[1] < greatest_decrease: 
-            greatest_decrease = row[1]
+        if int(row[1]) < greatest_decrease: 
+            greatest_decrease = int(row[1])
             greatest_decrease_date = row[0]
 
 # changes over period
@@ -53,6 +53,22 @@ print("Total:", net_total)
 print("Average Change:", average_change)
 print("Greatest Increase in Profits:", greatest_increase, greatest_increase_date)
 print("Greatest Descrease in Profits:", greatest_decrease, greatest_decrease_date)
+
+
+outpath = os.path.join("Analysis", "Analysis.txt")
+
+with open(outpath, "w") as file:
+
+
+    file.write("Financial Analysis\n")
+    file.write("------------------------\n")
+    file.write("Total Months:" + str(total_months) +"\n")
+    file.write("Total:"  + str(net_total) + "\n")
+    file.write("Average Change:" + str(average_change) + "\n")
+    file.write("Greatest Increase in Profits:" + str(greatest_increase) + greatest_increase_date + "\n")
+    file.write("Greatest Descrease in Profits:" + str(greatest_decrease) + greatest_decrease_date)
+
+
 
 
 
