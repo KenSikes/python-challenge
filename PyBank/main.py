@@ -62,7 +62,7 @@ with open(outpath, "w") as file:
 
     #creating the text in the file
     file.write("Financial Analysis\n")
-    file.write("------------------------\n")
+    file.write("-----------------------\n")
     file.write("Total Months:" + str(total_months) +"\n")
     file.write("Total:"  + str(net_total) + "\n")
     file.write("Average Change:" + str(average_change) + "\n")
