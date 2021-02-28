@@ -69,3 +69,21 @@ print("Winner: ")
 print("----------------------------------")
 
 
+#create the path for a text file 
+outpath = os.path.join("Analysis", "Analysis.txt")
+
+#give you the ability to write the file
+with open(outpath, "w") as file:
+
+    file.write("Election Results")
+    file.write("---------------------")
+    file.write("Total Votes: " + total_votes)
+    file.write("Khan: " + str(percent_khan) + "% " + str(khan_votes))
+    file.write("Correy : " + str(percent_correy) + "% " + str(correy_votes))
+    file.write("Li :" + str(percent_li) + "% " + str(li_votes))
+    file.write("O'tooley: " + str(percent_otooley) + "% " + str(otooley_votes))
+    file.write("---------------------------------")
+    file.write("Winner: ")
+    file.write("----------------------------------")
+
+
