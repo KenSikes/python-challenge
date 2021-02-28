@@ -18,7 +18,6 @@ percent_otooley = 0
 winner = ""
 #need list of candidates
 candidates = ['Khan', 'Correy', 'Li', "O'tooley"]
-candidate_votes = []
 
 
 #create file path
@@ -53,8 +52,10 @@ percent_otooley = round(int(otooley_votes)/int(total_votes)*100)
 
 
 
-#determine winner 
-#winner = 
+#determine winner
+candidate_votes = [khan_votes, correy_votes, li_votes, otooley_votes] 
+winner_index = candidate_votes.index(max(candidate_votes))
+winner = candidates[winner_index]
 
 #need to print out some results
 print("Election Results")
@@ -65,7 +66,7 @@ print("Correy : " + str(percent_correy) + "% " + str(correy_votes))
 print("Li :" + str(percent_li) + "% " + str(li_votes))
 print("O'tooley: " + str(percent_otooley) + "% " + str(otooley_votes))
 print("---------------------------------")
-print("Winner: ")
+print("Winner: " + winner +  "\n")
 print("----------------------------------")
 
 
@@ -83,7 +84,7 @@ with open(outpath, "w") as file:
     file.write("Li :" + str(percent_li) + "% " + str(li_votes) + "\n")
     file.write("O'tooley: " + str(percent_otooley) + "% " + str(otooley_votes) + "\n")
     file.write("---------------------------------\n")
-    file.write("Winner: \n")
+    file.write("Winner: " + (winner) +  "\n")
     file.write("----------------------------------\n")
 
 
