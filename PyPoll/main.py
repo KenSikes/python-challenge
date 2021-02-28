@@ -21,7 +21,6 @@ candidates = ['Khan', 'Correy', 'Li', "O'tooley"]
 candidate_votes = []
 
 
-
 #create file path
 csvpath = os.path.join("Resources", "election_data.csv")
 
@@ -46,16 +45,27 @@ with open(csvpath) as csvfile:
 
 total_votes = str(vote_counter)
 
-#determine winner 
+#get percent of votes
+percent_khan = round(int(khan_votes)/int(vote_counter)*100)
+percent_correy = round(int(correy_votes)/int(vote_counter)*100)
+percent_li = round(int(li_votes)/int(total_votes)*100)
+percent_otooley = round(int(otooley_votes)/int(total_votes)*100)
 
+
+
+#determine winner 
+#winner = 
 
 #need to print out some results
 print("Election Results")
 print("---------------------")
 print("Total Votes: " + total_votes)
-print("Khan: " + str(khan_votes))
-print("Correy : " + str(correy_votes))
-print("Li :" + str(li_votes))
-print("O'tooley: " + str(otooley_votes))
+print("Khan: " + str(percent_khan) + "% " + str(khan_votes))
+print("Correy : " + str(percent_correy) + "% " + str(correy_votes))
+print("Li :" + str(percent_li) + "% " + str(li_votes))
+print("O'tooley: " + str(percent_otooley) + "% " + str(otooley_votes))
+print("---------------------------------")
+print("Winner: ")
+print("----------------------------------")
 
 
