@@ -16,8 +16,9 @@ percent_correy = 0
 percent_li = 0
 percent_otooley = 0 
 winner = ""
-
-
+#need list of candidates
+candidates = ['Khan', 'Correy', 'Li', "O'tooley"]
+candidate_votes = []
 
 
 
@@ -40,9 +41,21 @@ with open(csvpath) as csvfile:
             correy_votes += 1
         elif row[2] == 'Li':
             li_votes += 1
-        elif row[2] == "O'tooley":
+        elif row[2] == "O'Tooley":
             otooley_votes += 1
 
+total_votes = str(vote_counter)
 
+#determine winner 
+
+
+#need to print out some results
+print("Election Results")
+print("---------------------")
+print("Total Votes: " + total_votes)
+print("Khan: " + str(khan_votes))
+print("Correy : " + str(correy_votes))
+print("Li :" + str(li_votes))
+print("O'tooley: " + str(otooley_votes))
 
 
