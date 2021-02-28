@@ -76,14 +76,14 @@ outpath = os.path.join("Analysis", "Analysis.txt")
 with open(outpath, "w") as file:
 
     file.write("Election Results/n")
-    file.write("---------------------/n")
-    file.write("Total Votes: " + total_votes + "/n")
-    file.write("Khan: " + str(percent_khan) + "% " + str(khan_votes) + "/n")
-    file.write("Correy : " + str(percent_correy) + "% " + str(correy_votes) + "/n")
-    file.write("Li :" + str(percent_li) + "% " + str(li_votes) + "/n")
-    file.write("O'tooley: " + str(percent_otooley) + "% " + str(otooley_votes) + "/n")
-    file.write("---------------------------------/n")
-    file.write("Winner: /n")
-    file.write("----------------------------------/n")
+    file.write("---------------------\n")
+    file.write("Total Votes: " + total_votes + "\n")
+    file.write("Khan: " + str(percent_khan) + "% " + str(khan_votes) + "\n")
+    file.write("Correy : " + str(percent_correy) + "% " + str(correy_votes) + "\n")
+    file.write("Li :" + str(percent_li) + "% " + str(li_votes) + "\n")
+    file.write("O'tooley: " + str(percent_otooley) + "% " + str(otooley_votes) + "\n")
+    file.write("---------------------------------\n")
+    file.write("Winner: \n")
+    file.write("----------------------------------\n")
 
 
